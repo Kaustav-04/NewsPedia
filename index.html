@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>NewsPedia</title>
   </head>
@@ -22,7 +23,28 @@
         </div>
     </nav>
     <div class="container my-3">
-        <h2><b>NewsPedia </b><span class="badge bg-secondary">Latest</span></h2>
+        <p>
+          <div id="top">
+            <h2><b>NewsPedia </b><span class="badge bg-secondary">Latest</span> <span class="badge bg-secondary">Trending</span></h2>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+              Filter <i class="fa-solid fa-bars-filter"></i>
+            </button>
+          </div>
+        </p>
+        <hr>
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body row">
+            <div id="selectCountry">
+              <label for="Country">Country :</label>
+              <select class="form-select" aria-label="Default select example" id ="Country" ></select>
+            </div>
+            <div id="selectType">
+              <label for="Type">Type :</label>
+              <select class="form-select" aria-label="Default select example" id="Type" ></select>
+            </div>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" onclick="run()">Show Results</button>
+          </div>
+        </div>
         <div id="main">
             <!-- <div class="card m-3" style="width: 18rem;">
                 <img src="..." class="card-img-top" alt="...">

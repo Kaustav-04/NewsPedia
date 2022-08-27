@@ -1,19 +1,23 @@
 .navbar-brand{
     margin-left: 40px;
 }
-
 #main{
     display: flex;
     flex-wrap: wrap;
     margin: auto;
     width:100%;
 }
+#top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .card{
     overflow: hidden;
 }
 .card:hover .readMore{
     top:0%;
-    transition: ease-in-out 1s;
+    transition: ease-in-out 0.7s;
 }
 .readMore{
     background-color: rgba(0, 0, 0, 0.368);
@@ -25,4 +29,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.form-select{
+    width:100%;
+}
+.row{
+    flex-direction: row !important;
+}
+.collapse div div{
+    margin: 0px 5px;
+    width: 300px;
+}
+.collapse div div label{
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 5px;
+    text-transform:capitalize;
+}
+.row .btn{
+    width:132px;
+    height: fit-content;
+    padding: 9px;
+    font-size: 1.2rem;
+    position: relative;
+    bottom: -30px;
 }
